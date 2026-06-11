@@ -1,1 +1,4 @@
-{ "version": "2026.06.11-1", "notes": "Phase 0 起手架構：無障礙骨架 + favicon/PWA + 頁尾" }
+{
+    "version":  "2026.06.11-2",
+    "notes":  "Phase 1 認識石門內頁 + Accesskey U/C/L/B"
+}
