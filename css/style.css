@@ -1,0 +1,282 @@
+/* =========================================================
+   石門國小官網 — 基礎樣式（無障礙優先）
+   設計原則：高對比、焦點可見、可縮放、RWD、尊重 reduced-motion
+   ========================================================= */
+
+:root {
+  --brand:       #0e6e7a;   /* 主色：水庫／鱻魚 teal */
+  --brand-dark:  #0a4f58;   /* 連結文字用（白底對比 > 4.5:1） */
+  --brand-darker:#073b42;
+  --accent:      #c8431f;   /* 暖色強調（白底對比達標） */
+  --text:        #15272b;   /* 主文字（近黑，極高對比） */
+  --muted:       #44595e;   /* 次要文字（白底對比 > 4.5:1） */
+  --bg:          #ffffff;
+  --bg-soft:     #f1f7f8;
+  --border:      #cfdfe1;
+  --focus:       #b8341d;   /* 焦點外框：高辨識暖紅 */
+  --maxw:        1080px;
+  --radius:      14px;
+}
+
+/* ---------- 基礎 ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem;     /* 17px，可隨瀏覽器縮放 */
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container { width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
+
+a { color: var(--brand-dark); }
+a:hover { color: var(--accent); }
+
+img { max-width: 100%; height: auto; }
+
+h1, h2, h3 { line-height: 1.3; color: var(--brand-darker); }
+
+.muted { color: var(--muted); font-size: 0.9375rem; }
+
+/* ---------- 焦點可見（WCAG 2.4.7，務必保留） ---------- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- 跳至主要內容（隱藏至取得焦點） ---------- */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: var(--brand-darker);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 10px 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 0; color: #fff; }
+
+/* ---------- 內容定位點 ::: 與快速鍵 ---------- */
+.accesskey-area { line-height: 0; }
+.accesskey-area a {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.accesskey-area a:focus {           /* 取得焦點時顯示 ::: */
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin: 4px;
+  padding: 4px 8px;
+  background: var(--brand-darker);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- 頁首 ---------- */
+.site-header {
+  background: var(--bg);
+  border-bottom: 3px solid var(--brand);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;                /* 允許正常收縮，避免被擠成一行一字 */
+  text-decoration: none;
+  color: var(--brand-darker);
+}
+.brand__logo { border-radius: 10px; flex: none; }
+.brand__text { display: flex; flex-direction: column; min-width: 0; }
+.brand__name { font-size: 1.15rem; font-weight: 800; line-height: 1.2; }
+.brand__tagline { font-size: 0.85rem; color: var(--brand); font-weight: 600; }
+
+/* 主選單列 */
+.main-nav { background: var(--brand); }
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-nav__list a {
+  display: block;
+  padding: 0.85rem 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-nav__list a:hover,
+.main-nav__list a:focus-visible { background: var(--brand-dark); color: #fff; }
+.main-nav__list a[aria-current="page"] {
+  background: var(--brand-darker);
+  box-shadow: inset 0 -4px 0 #fcd34d;
+}
+
+/* 漢堡按鈕（桌機隱藏） */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.4rem 0.8rem;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.nav-toggle__bar { width: 20px; height: 2px; background: #fff; display: block; }
+.nav-toggle__label { font-size: 0.95rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-darker) 100%);
+  color: #fff;
+  padding-block: 2.5rem;
+}
+.hero__eyebrow { margin: 0 0 0.25rem; font-weight: 600; color: #d7f0f3; letter-spacing: .05em; }
+.hero__title { margin: 0 0 0.5rem; font-size: clamp(1.7rem, 4vw, 2.4rem); color: #fff; }
+.hero__lead { margin: 0 0 1rem; max-width: 60ch; color: #eef9fa; }
+.hero__note {
+  display: inline-block;
+  margin: 0;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+/* ---------- 內容版面 ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.25rem;
+  padding-block: 2rem;
+}
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+}
+.card h2 { margin-top: 0; font-size: 1.3rem; }
+
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list__item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+.news-list__item:last-child { border-bottom: none; }
+.news-list__date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+.news-list__link { font-weight: 600; }
+
+.quicklinks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.quicklinks a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.quicklinks a:hover,
+.quicklinks a:focus-visible { border-color: var(--brand); background: #fff; }
+
+/* ---------- 頁尾 ---------- */
+.site-footer {
+  background: var(--brand-darker);
+  color: #e8f3f4;
+  margin-top: 2rem;
+}
+.site-footer a { color: #c7ecf1; }
+.site-footer a:hover { color: #fff; }
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.5rem;
+  padding-block: 2rem;
+}
+.site-footer__heading { font-size: 1.1rem; color: #fff; margin: 0 0 0.6rem; }
+.site-footer__contact { font-style: normal; line-height: 1.9; }
+.site-footer__links { list-style: none; margin: 0 0 0.8rem; padding: 0; line-height: 2; }
+.site-footer__a11y-note { font-size: 0.875rem; color: #bcd9dd; margin: 0; }
+
+/* 作者署名 */
+.site-credit {
+  text-align: center;
+  padding: 18px 16px;
+  font-size: 13px;
+  color: #bcd9dd;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.site-credit__heart { display: inline-block; margin: 0 2px; filter: saturate(1.1); }
+.site-credit__author {
+  color: #e8f3f4;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  padding-bottom: 1px;
+  transition: color .2s, border-color .2s;
+}
+.site-credit__author:hover { color: #fcd34d; border-bottom-color: #fcd34d; }
+
+/* ---------- RWD：行動裝置收合選單 ---------- */
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; flex: none; }
+  .main-nav { display: none; }
+  .main-nav.is-open { display: block; }
+  .main-nav__list { flex-direction: column; }
+  .main-nav__list a { padding: 0.9rem 1rem; border-top: 1px solid rgba(255,255,255,.15); }
+  /* 縮小品牌字級，讓長校名在窄螢幕自然折成兩行而非一字一行 */
+  .brand__logo { width: 40px; height: 40px; }
+  .brand__name { font-size: 1rem; }
+  .brand__tagline { font-size: 0.78rem; }
+}
+
+/* ---------- 尊重「減少動態效果」偏好（WCAG 2.3.3 / 動暈） ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 列印 ---------- */
+@media print {
+  .skip-link, .accesskey-area, .nav-toggle, .main-nav { display: none; }
+  body { color: #000; font-size: 12pt; }
+  .hero { background: none; color: #000; }
+}

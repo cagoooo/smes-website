@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>無障礙說明與網站導覽｜桃園市龍潭區石門國民小學</title>
+  <meta name="description" content="石門國小官方網站無障礙說明與網站導覽：快速鍵、鍵盤操作、字級調整與網站地圖。" />
+  <meta name="theme-color" content="#0e6e7a" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <nav class="accesskey-area" aria-label="網頁快速鍵">
+    <a id="ak-u" href="#nav" accesskey="U" title="上方導覽連結區，快速鍵 Alt+U">:::</a>
+    <a id="ak-c" href="#main" accesskey="C" title="中央內容區塊，快速鍵 Alt+C">:::</a>
+    <a id="ak-z" href="#footer" accesskey="Z" title="下方頁尾資訊區，快速鍵 Alt+Z">:::</a>
+  </nav>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="石門國小首頁">
+        <img class="brand__logo" src="assets/icon-192.png" width="48" height="48" alt="石門國小校徽" />
+        <span class="brand__text">
+          <span class="brand__name">桃園市龍潭區石門國民小學</span>
+          <span class="brand__tagline">鱻魚特色學園</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="開啟主選單">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__label">選單</span>
+      </button>
+    </div>
+    <nav id="nav" class="main-nav" aria-label="主選單">
+      <ul class="container main-nav__list">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="#">認識石門</a></li>
+        <li><a href="#">鱻魚特色學園</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">招生資訊</a></li>
+        <li><a href="accessibility.html" aria-current="page">無障礙說明</a></li>
+        <li><a href="#footer">聯絡我們</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="hero" aria-labelledby="a11y-title">
+      <div class="container">
+        <p class="hero__eyebrow">網站資訊</p>
+        <h1 id="a11y-title" class="hero__title">無障礙說明與網站導覽</h1>
+        <p class="hero__lead">
+          本網站依據國家通訊傳播主管機關公布之「網站無障礙規範」設計與製作，
+          致力達到 AA 等級，讓所有使用者都能無障礙地取得資訊。
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="card" aria-labelledby="ak-title" style="margin-top:1.5rem">
+        <h2 id="ak-title">快速鍵（Accesskey）</h2>
+        <p>本網站設定下列快速鍵，方便您快速到達主要區塊：</p>
+        <table>
+          <caption class="muted">網站快速鍵對照表</caption>
+          <thead>
+            <tr><th scope="col">快速鍵</th><th scope="col">功能</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Alt + U</th><td>上方導覽連結區</td></tr>
+            <tr><th scope="row">Alt + C</th><td>中央主要內容區塊</td></tr>
+            <tr><th scope="row">Alt + Z</th><td>下方頁尾資訊區</td></tr>
+          </tbody>
+        </table>
+        <p class="muted">
+          快速鍵啟用方式因瀏覽器而異：Windows 多為 <kbd>Alt</kbd> 加字母；
+          部分瀏覽器需 <kbd>Alt</kbd>+<kbd>Shift</kbd> 加字母；macOS 多為 <kbd>Ctrl</kbd>+<kbd>Option</kbd> 加字母。
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="kb-title" style="margin-top:1.25rem">
+        <h2 id="kb-title">鍵盤操作</h2>
+        <ul>
+          <li>使用 <kbd>Tab</kbd> 鍵可依序移動到網頁中的連結與表單欄位，<kbd>Shift</kbd>+<kbd>Tab</kbd> 可往回移動。</li>
+          <li>移動到連結或按鈕時按 <kbd>Enter</kbd> 即可開啟；核取方塊等可用 <kbd>空白鍵</kbd> 切換。</li>
+          <li>所有操作皆可在不使用滑鼠的情況下完成，且目前焦點位置會有明顯外框標示。</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="font-title" style="margin-top:1.25rem">
+        <h2 id="font-title">調整文字大小</h2>
+        <p>
+          本網站文字採相對單位設計，您可使用瀏覽器內建功能放大或縮小：
+          按 <kbd>Ctrl</kbd>+<kbd>+</kbd> 放大、<kbd>Ctrl</kbd>+<kbd>-</kbd> 縮小、<kbd>Ctrl</kbd>+<kbd>0</kbd> 還原（macOS 改用 <kbd>⌘</kbd>）。
+          放大至 200% 仍可正常閱讀，不會破版。
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="map-title" style="margin-top:1.25rem">
+        <h2 id="map-title">網站導覽（網站地圖）</h2>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li>認識石門（校長的話、學校沿革、行政組織、交通位置）<span class="muted">— 建置中</span></li>
+          <li>鱻魚特色學園 <span class="muted">— 建置中</span></li>
+          <li>最新消息 <span class="muted">— 建置中</span></li>
+          <li>招生資訊 <span class="muted">— 建置中</span></li>
+          <li><a href="accessibility.html">無障礙說明與網站導覽</a></li>
+          <li>聯絡我們（見頁尾）</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="contact-title" style="margin:1.25rem 0 1.5rem">
+        <h2 id="contact-title">無障礙問題回報</h2>
+        <p>
+          若您在使用本網站時遇到任何無障礙障礙，歡迎與我們聯繫，我們將儘速改善：
+          請來電學校總機（建置中），或透過頁尾聯絡資訊與我們聯繫。
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">桃園市龍潭區石門國民小學</h2>
+        <address class="site-footer__contact">
+          地址：（學校地址，建置中）<br />
+          電話：（總機電話，建置中）<br />
+          官方網站：<a href="https://www.smes.tyc.edu.tw/">www.smes.tyc.edu.tw</a>
+        </address>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">網站資訊</h2>
+        <ul class="site-footer__links">
+          <li><a href="accessibility.html">無障礙說明 / 網站導覽</a></li>
+          <li><a href="#">隱私權與資訊安全政策</a></li>
+          <li><a href="#main">回到主要內容</a></li>
+        </ul>
+        <p class="site-footer__a11y-note">
+          本網站依循「網站無障礙規範」設計，快速鍵：Alt+U 上方導覽、Alt+C 主要內容、Alt+Z 頁尾。
+        </p>
+      </div>
+    </div>
+    <div class="site-credit">
+      Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by
+      <a
+        href="https://www.smes.tyc.edu.tw/modules/tadnews/page.php?ncsn=11&nsn=16#a5"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="site-credit__author"
+      >阿凱老師</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

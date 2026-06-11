@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="石門國小校徽（鱻魚）">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e6e7a"/>
+      <stop offset="1" stop-color="#073b42"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- 魚身 -->
+  <ellipse cx="35" cy="33" rx="17" ry="11" fill="#ffffff"/>
+  <!-- 魚尾 -->
+  <path d="M18 33 L6 24 L9 33 L6 42 Z" fill="#ffffff"/>
+  <!-- 背鰭 -->
+  <path d="M30 22 Q36 13 41 23 Z" fill="#d7f0f3"/>
+  <!-- 眼睛 -->
+  <circle cx="44" cy="30" r="2.6" fill="#073b42"/>
+  <!-- 水波 -->
+  <path d="M12 52 q6 -4 12 0 t12 0 t12 0" fill="none" stroke="#9fd9df" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
