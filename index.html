@@ -63,9 +63,10 @@
       <ul class="container main-nav__list">
         <li><a href="index.html" aria-current="page">首頁</a></li>
         <li><a href="about.html">認識石門</a></li>
-        <li><a href="#">鱻魚特色學園</a></li>
-        <li><a href="#">最新消息</a></li>
-        <li><a href="#">招生資訊</a></li>
+        <li><a href="feature.html">鱻魚特色學園</a></li>
+        <li><a href="news.html">最新消息</a></li>
+        <li><a href="admission.html">招生資訊</a></li>
+        <li><a href="digital.html">數位特色</a></li>
         <li><a href="accessibility.html">無障礙說明</a></li>
         <li><a href="#footer">聯絡我們</a></li>
       </ul>
@@ -84,7 +85,7 @@
           無論您使用滑鼠、鍵盤或螢幕報讀軟體，都能順利取得校園資訊。
         </p>
         <p class="hero__note" role="note">
-          🚧 本站為新版官網建置中（Phase 0 起手架構），內容陸續上線。
+          🚧 本站為新版官網建置中，各單元內容陸續上線。
         </p>
       </div>
     </section>
@@ -97,13 +98,14 @@
         <ul class="news-list">
           <li class="news-list__item">
             <span class="news-list__date"><time datetime="2026-06-11">2026-06-11</time></span>
-            <a class="news-list__link" href="#">新版官方網站開始建置（範例公告）</a>
+            <a class="news-list__link" href="news-article.html">新版官方網站開始建置（範例公告）</a>
           </li>
           <li class="news-list__item">
             <span class="news-list__date"><time datetime="2026-06-11">2026-06-11</time></span>
-            <a class="news-list__link" href="#">本站導入無障礙設計（範例公告）</a>
+            <a class="news-list__link" href="news-article.html">本站導入無障礙設計（範例公告）</a>
           </li>
         </ul>
+        <p><a href="news.html">查看全部消息 →</a></p>
         <p class="muted">＊以上為範例資料，正式公告將於後台建置完成後上線。</p>
       </section>
 
@@ -112,15 +114,17 @@
         <h2 id="feature-title">鱻魚特色學園</h2>
         <p>
           石門國小以「鱻魚特色學園」為發展主軸，結合在地水庫環境與生態，
-          發展具石門特色的探究式課程。（特色課程故事頁建置中）
+          發展具石門特色的探究式課程。
         </p>
+        <p><a href="feature.html">了解鱻魚特色學園 →</a></p>
       </section>
 
       <!-- 快速連結 -->
       <section class="card" aria-labelledby="quick-title">
         <h2 id="quick-title">快速連結</h2>
         <ul class="quicklinks">
-          <li><a href="#">招生資訊</a></li>
+          <li><a href="admission.html">招生資訊</a></li>
+          <li><a href="digital.html">數位特色</a></li>
           <li><a href="#">行事曆</a></li>
           <li><a href="#">榮譽榜</a></li>
           <li><a href="#">表單下載</a></li>
@@ -177,7 +181,7 @@
   <script>
   (function(){
     if(!('serviceWorker' in navigator)) return;
-    var APP_VERSION='2026.06.11-2';   // 與 sw.js 同步（bump-version.ps1 會一起改）
+    var APP_VERSION='2026.06.11-3';   // 與 sw.js 同步（bump-version.ps1 會一起改）
     var reloaded=false;
     function showBar(waiting){
       if(document.getElementById('sw-update-bar')) return;

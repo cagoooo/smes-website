@@ -1,12 +1,17 @@
 /* 石門國小官網 Service Worker
    ⚠️ 每次部署請改 BUILD_VERSION（或執行 scripts/bump-version.ps1），
       否則瀏覽器視為相同檔案、不會觸發更新通知。 */
-const BUILD_VERSION = '2026.06.11-2';
+const BUILD_VERSION = '2026.06.11-3';
 const CACHE = 'smes-' + BUILD_VERSION;
 const PRECACHE = [
   './',
   './index.html',
   './about.html',
+  './feature.html',
+  './news.html',
+  './news-article.html',
+  './admission.html',
+  './digital.html',
   './accessibility.html',
   './css/style.css',
   './js/main.js',
