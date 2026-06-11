@@ -3,6 +3,8 @@
 > 鱻魚特色學園 · 一個 **serverless、無障礙（目標 AA）、老師友善** 的學校官網。
 > 託管：GitHub Pages（靜態）；資料層（規劃中）：Firebase。
 
+🌐 **線上 Demo**：https://cagoooo.github.io/smes-website/
+
 ---
 
 ## 這是什麼
