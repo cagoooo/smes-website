@@ -156,7 +156,7 @@ def page(filename, title, desc, active, crumbs, h1, content, sidenav=None):
         <h2 class="site-footer__heading">網站資訊</h2>
         <ul class="site-footer__links">
           <li><a href="accessibility.html">無障礙說明 / 網站導覽</a></li>
-          <li><a href="#">隱私權與資訊安全政策</a></li>
+          <li><a href="privacy.html">隱私權與資訊安全政策</a></li>
           <li><a href="#main">回到主要內容</a></li>
         </ul>
         <p class="site-footer__a11y-note">
@@ -289,18 +289,18 @@ page(
           </section>
           <section id="tools" aria-labelledby="tools-h">
             <h2 id="tools-h">自製教學工具</h2>
-            <p>本校自行開發／導入多項教學與行政數位工具（連結整理中）：</p>
-            <ul class="quicklinks">
-              <li><a href="#">資訊科技駕駛艙</a></li>
-              <li><a href="#">石小智能客服</a></li>
-              <li><a href="#">PIRLS 閱讀理解生成站</a></li>
-              <li><a href="#">班級小管家</a></li>
-              <li><a href="#">即時互動投票系統</a></li>
-              <li><a href="#">親師溝通小幫手</a></li>
-              <li><a href="#">會議記錄摘要</a></li>
-              <li><a href="#">單一／大量抽籤系統</a></li>
+            <p>本校自行開發／導入多項教學與行政數位工具（正式連結整理中）：</p>
+            <ul>
+              <li class="muted">資訊科技駕駛艙</li>
+              <li class="muted">石小智能客服</li>
+              <li class="muted">PIRLS 閱讀理解生成站</li>
+              <li class="muted">班級小管家</li>
+              <li class="muted">即時互動投票系統</li>
+              <li class="muted">親師溝通小幫手</li>
+              <li class="muted">會議記錄摘要</li>
+              <li class="muted">單一／大量抽籤系統</li>
             </ul>
-            <p class="muted">＊以上為本校現有數位工具，正式連結將陸續補上。</p>
+            <p class="muted">＊以上為本校現有數位工具，正式連結將於資料整理完成後陸續補上。</p>
           </section>
           <section id="smart" aria-labelledby="smart-h">
             <h2 id="smart-h">智慧校園</h2>

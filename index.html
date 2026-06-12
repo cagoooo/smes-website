@@ -125,9 +125,9 @@
         <ul class="quicklinks">
           <li><a href="admission.html">招生資訊</a></li>
           <li><a href="digital.html">數位特色</a></li>
-          <li><a href="#">行事曆</a></li>
-          <li><a href="#">榮譽榜</a></li>
-          <li><a href="#">表單下載</a></li>
+          <li><span class="muted">行事曆（建置中）</span></li>
+          <li><span class="muted">榮譽榜（建置中）</span></li>
+          <li><span class="muted">表單下載（建置中）</span></li>
           <li><a href="accessibility.html">無障礙說明</a></li>
           <li><a href="#footer">聯絡我們</a></li>
         </ul>
@@ -153,7 +153,7 @@
         <h2 class="site-footer__heading">網站資訊</h2>
         <ul class="site-footer__links">
           <li><a href="accessibility.html">無障礙說明 / 網站導覽</a></li>
-          <li><a href="#">隱私權與資訊安全政策</a></li>
+          <li><a href="privacy.html">隱私權與資訊安全政策</a></li>
           <li><a href="#main">回到主要內容</a></li>
         </ul>
         <p class="site-footer__a11y-note">
@@ -181,7 +181,7 @@
   <script>
   (function(){
     if(!('serviceWorker' in navigator)) return;
-    var APP_VERSION='2026.06.11-3';   // 與 sw.js 同步（bump-version.ps1 會一起改）
+    var APP_VERSION='2026.06.12-1';   // 與 sw.js 同步（bump-version.ps1 會一起改）
     var reloaded=false;
     function showBar(waiting){
       if(document.getElementById('sw-update-bar')) return;
